@@ -1,9 +1,6 @@
 name: Docker Image CI
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -13,6 +10,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    environment: development
 
     steps:
     - name: Checkout Code
