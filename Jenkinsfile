@@ -8,11 +8,11 @@ pipeline {
     
     stages {
         
-        stage('Checkout'){
+        /*stage('Checkout'){
             steps{
                 checkout scm: [$class: 'GitSCM', userRemoteConfigs: [[url: 'https://github.com/paulparas/private-microservice-1.git']], branches: [[name: 'refs/heads/main']]], poll: true
             }
-        }
+        }*/
         
         stage('Slack Notify Start'){
             steps{
